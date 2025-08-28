@@ -7,8 +7,8 @@ import static com.calculator2.calculatorV2.operation.firstClassCollection.Operat
 
 public class OperationController {
 
-  //첫번째 구분자 [.|:], 두번째구분자 [\\s*[+]\\s*] ㅎ적용
-  public List<String> separatorInput(String firstInput) {
+  //첫번째 구분자 [.|:], 두번째구분자 [\\s*[+]\\s*] 적용
+    public List<String> separatorInput(String firstInput) {
     List<String> result = firstAndSecondSplit(firstInput);
     return result;
   }
