@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class OperationManager {
-  private static Map<String, OperationStrategy> operations =Map.of(
+  private static final Map<String, OperationStrategy> operations =Map.of(
       "+", operands -> operands.stream().reduce(0, Integer::sum)
   );
 
@@ -71,8 +71,7 @@ public class OperationManager {
     try {
       return Integer.parseInt(strings.trim());
     } catch (NumberFormatException e) {
-      throw new RuntimeException("문자열이 숫자가 아닙니다 Error ",e);
+      throw new IllegalArgumentException("문자열이 숫자가 아닙니다 Error ",e);
     }
   }
-
 }
