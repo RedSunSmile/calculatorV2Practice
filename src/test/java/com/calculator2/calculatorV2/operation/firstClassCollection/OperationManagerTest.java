@@ -84,8 +84,7 @@ public class OperationManagerTest {
   @ParameterizedTest
   @ValueSource(strings = {"abc", "가나다"})
   public void numberAndExceptionTest(String input) {
-    assertThrows(RuntimeException.class, () -> numberAndException(input));
-
+    assertThrows(IllegalArgumentException.class, () -> numberAndException(input));
   }
 
 }
